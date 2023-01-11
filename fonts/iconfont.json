@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31518600",
+      "name": "Tab_客户列表",
+      "font_class": "Tab_kehuliebiao",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "31518601",
+      "name": "Tab_客户信息模板",
+      "font_class": "Tab_kehuxinximoban",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "31518602",
+      "name": "Tab_软件订单",
+      "font_class": "Tab_ruanjiandingdan",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    }
+  ]
+}
