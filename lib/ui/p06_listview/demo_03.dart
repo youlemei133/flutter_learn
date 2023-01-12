@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/p02_container/demo_01.dart';
 
 void main() {
   runApp(MaterialApp(

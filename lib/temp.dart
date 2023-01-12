@@ -14,66 +14,57 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Wrap表示一个流式布局
-    return Wrap(
-      //主轴（布局方向）
-      direction: Axis.horizontal,
-      //主轴的对齐方式
-      alignment: WrapAlignment.start,
-      //子控件之间在主轴上的间距
-      spacing: 10,
-      //竖直方向上的排列方式：down从上往下，up从下往上
-      verticalDirection: VerticalDirection.down,
-      runAlignment: WrapAlignment.center,
-      //子控件之间在横轴上的间距
-      runSpacing: 10,
-      children: [
-        Button("第1集", () {}),
-        Button("第2集", () {}),
-        Button("第3集", () {}),
-        Button("第4集", () {}),
-        Button("第5集", () {}),
-        Button("第6集", () {}),
-        Button("第7集", () {}),
-        Button("第8集", () {}),
-        Button("第9集", () {}),
-        Button("第10集", () {}),
-        Button("第11集", () {}),
-        Button("第12集", () {}),
-        Button("第13集", () {}),
+    return Center(
+      child: GestureDetector(
+        // //按下事件
+        // onTapDown: (details) => print("onTapDown:$details"),
+        // //松开事件
+        // onTapUp: (details) => print("onTapUp:$details"),
+        // //点击事件
+        // onTap: () => print("onTap"),
+        //
+        // //双击事件
+        // onDoubleTap: () => print("onDoubleTap"),
+        //
+        // //每次点击按下事件（不管是长按还是单击都会回调）
+        // onLongPressDown: (details) => print("onLongPressDown"),
+        // //长按开始事件（点击一段时间后才回调）
+        // onLongPressStart: (details) => print("onLongPressStart"),
+        // //长按结束事件（长按松开时回调）
+        // onLongPressEnd: (details) => print("onLongPressEnd"),
+        // //长按结束事件，和onLongPressEnd一样
+        // onLongPressUp: () => print("onLongPressUp"),
+        // //长按事件，（长按时发生）
+        // onLongPress: () => print("onLongPress"),
+        // //长按移动事件（长按后开始移动，回调）
+        // onLongPressMoveUpdate: (details) => print("onLongPressMoveUpdate"),
 
-        Button("第1集", () {}),
-        Button("第2集", () {}),
-        Button("第3集", () {}),
-        Button("第4集", () {}),
-        Button("第5集", () {}),
-        Button("第6集", () {}),
-        Button("第7集", () {}),
-        Button("第8集", () {}),
-        Button("第9集", () {}),
-        Button("第10集", () {}),
-        Button("第11集", () {}),
-        Button("第12集", () {}),
-        Button("第13集", () {}),
-      ],
-    );
-  }
-}
+        //onVerticalXxx表示监听竖直方向的拖拽
+        //onHorizontalXxx表示监听水平方向的拖拽
+        //如果同时监听竖直和水平方向的拖拽，发生拖拽时则只会回调相应方向上的回调
+        //1.开始时：回调onVerticalDragDown和onHorizontalDragStart
+        //2.拖拽开始，此时拖拽方向是确定的，非拖拽方向的监听将会被取消，即调用onXxxCancel
+        //3.回调拖拽方法，onXxxDragUpdate()
+        //4.拖拽结束，回调onXxxDragEnd()
+        //5.若只监听了某个方向的拖拽，则无论实际拖拽方向如何，都会回调设置的监听
+        //竖直方向拖拽开始
+        onVerticalDragDown: (details) => print("onVerticalDragDown"),
+        //竖直方向拖拽开始
+        onVerticalDragStart: (details) => print("onVerticalDragStart"),
+        //竖直方向拖拽移动
+        onVerticalDragUpdate: (details) =>
+            print("onVerticalDragUpdate：$details"),
+        //竖直方向拖拽结束
+        onVerticalDragEnd: (details) => print("onVerticalDragEnd"),
+        //竖直方向拖拽结束
+        onVerticalDragCancel: () => print("onVerticalDragCancel"),
 
-class Button extends StatelessWidget {
-  final String text;
-  final void Function()? onPressed;
-
-  const Button(this.text, this.onPressed, {Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 236, 233, 233)),
-          foregroundColor: MaterialStateProperty.all(Colors.blue)),
-      child: Text(text),
+        child: Container(
+          width: 200,
+          height: 100,
+          color: Colors.red,
+        ),
+      ),
     );
   }
 }
