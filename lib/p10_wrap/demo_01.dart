@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
       //竖直方向上的排列方式：down从上往下，up从下往上
       verticalDirection: VerticalDirection.down,
       runAlignment: WrapAlignment.spaceEvenly,
-      //子控件之间在次轴上的间距
+      //子控件之间在横轴上的间距
       runSpacing: 50,
       children: [
         Button("第1集", () {}),

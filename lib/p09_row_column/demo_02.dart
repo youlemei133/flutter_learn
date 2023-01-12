@@ -18,7 +18,9 @@ class Body extends StatelessWidget {
     return Container(
       color: Colors.black26,
       child: Column(
+        //横轴（水平方向）对齐方式
         crossAxisAlignment: CrossAxisAlignment.end,
+        //主轴上对齐方式
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           IconContainer(

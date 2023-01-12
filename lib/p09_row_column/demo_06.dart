@@ -17,6 +17,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black26,
+      //使用Expanded来填充Column
       child: Column(
         children: [
           Expanded(

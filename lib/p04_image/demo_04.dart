@@ -17,6 +17,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
+      //ClipOval:使用椭圆来裁剪子控件
       child: ClipOval(
         child: Image.asset("images/login/advanced_course_bg_teacher.png",
           fit: BoxFit.cover,

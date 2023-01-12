@@ -16,8 +16,12 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //GridView.extent：固定横轴上子控件的宽度，意味着横轴上子控件个数是可变的
     return GridView.extent(
-      maxCrossAxisExtent: 100,
+      scrollDirection: Axis.vertical,
+      //横轴上子控件最大宽度
+      maxCrossAxisExtent: 400,
+      //子控件宽高比
       childAspectRatio: 2.0,
       children: [
         Container(

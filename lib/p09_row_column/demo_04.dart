@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +16,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black26,
+      //使用Expanded填充Row
       child: Row(
         children: [
           Expanded(

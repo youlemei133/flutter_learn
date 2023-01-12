@@ -23,14 +23,23 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Container(
-      width: 200,
-      height: 200,
-      color: Colors.red,
-      child: Image.asset(
-        "images/login/advanced_course_bg_teacher.png",
-        fit: BoxFit.scaleDown,
-        repeat: ImageRepeat.repeatY,
-      ),
-    ));
+          width: 100,
+          height: 500,
+          color: Colors.red,
+          child: Image.asset(
+            "images/login/advanced_course_bg_teacher.png",
+            //图片填充方式：
+            // fill 图片会拉伸，从而填充整个容器，图片宽高为容器宽高
+            // contain 图片会进行缩放，完整显示在容器中，图片宽或高为容器宽高
+            // cover 图片会进行缩放以及裁剪，填充整个容器，图片宽高为容器宽高
+            // fitWidth 图片会进行缩放以及裁剪，使其宽和容器宽一样
+            // fitHeight 图片会进行缩放以及裁剪，使其高和容器高一样
+            // none 图片不做任何处理
+            // scaleDown 若容器宽高都大于图片宽高，则图片不会缩放
+            //           若容器宽高有一个小于图片宽高，则图片会缩小，使图片完整显示在容器中
+            fit: BoxFit.scaleDown,
+            // repeat: ImageRepeat.repeatY,
+          ),
+        ));
   }
 }

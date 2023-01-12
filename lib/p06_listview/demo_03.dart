@@ -15,6 +15,7 @@ void main() {
 class Body extends StatelessWidget {
   const Body({super.key});
 
+  //动态创建一组控件
   List<Widget> _children1() {
     List<Widget> widgets = [];
     for (int i = 0; i < 100; i++) {
@@ -33,6 +34,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      //children使用动态创建的控件
       children: _children1(),
     );
   }

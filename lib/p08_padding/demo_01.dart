@@ -14,31 +14,33 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          width: 200,
-          height: 200,
-          color: Colors.red,
-          child: Container(
-            width: 100,
-            height: 100,
-            color: Colors.blue,
+    return Center(
+        child: Row(children: [
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.black,
+            child: Container(
+              color: Colors.blue,
+            ),
           ),
-        ),
-        Container(
+          const SizedBox(
+            width: 20,
+          ),
+          //父容器
+          Container(
             width: 200,
             height: 200,
             color: Colors.red,
+            //Padding：设置子控件（蓝色Container）与父容器（红色Container）之间的间距
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(16),
+              //子控件
               child: Container(
-                width: 100,
-                height: 100,
                 color: Colors.blue,
               ),
-            )),
-      ],
-    );
+            ),
+          ),
+        ]));
   }
 }

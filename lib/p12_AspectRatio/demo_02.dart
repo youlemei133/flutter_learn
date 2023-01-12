@@ -18,6 +18,7 @@ class Body extends StatelessWidget {
     return Container(
       width: 200,
       color: Colors.red,
+      //AspectRatio：使用宽高比来确定子控件的宽高
       child: AspectRatio(
         //宽占比大些，所以以宽为标准，计算高
         aspectRatio: 2.0 / 1.0,

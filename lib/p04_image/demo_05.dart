@@ -17,6 +17,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
+      //CircleAvatar:表示一个圆形头像
       child: CircleAvatar(
         radius: 100,
         backgroundImage:  AssetImage("images/login/advanced_course_bg_teacher.png"),

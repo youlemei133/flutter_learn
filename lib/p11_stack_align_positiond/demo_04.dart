@@ -36,22 +36,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
-class AlignWidget extends StatelessWidget {
-  final Alignment align;
-
-  const AlignWidget({required this.align, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    //Align用于控制子控件（FlutterLogo）在父容器（Container）中的位置
-    return Align(
-      //子控件在父容器中的位置
-      alignment: align,
-      //子控件
-      child: const FlutterLogo(
-        size: 60,
-      ),
-    );
-  }
-}

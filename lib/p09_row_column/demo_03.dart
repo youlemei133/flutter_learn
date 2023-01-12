@@ -17,11 +17,16 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black26,
+      //Flex表示Row或Column
       child: Flex(
+        //方向：horizontal表示行、vertical表示列
         direction: Axis.horizontal,
         children: [
+          //Expanded使用flex来扩展子控件（宽或高可变），用于填充Row、Column、Flex控件，相当于Android中LinearLayout的weight
           Expanded(
+            //子控件占父容器（Flex）的权重
             flex: 2,
+            //子控件
             child: IconContainer(
               Icons.home,
               color: Colors.red,

@@ -52,7 +52,7 @@ class Body extends StatelessWidget {
             decorationStyle: TextDecorationStyle.solid,
             //单词之间的间距
             wordSpacing: 10,
-            //单词之间间距
+            //字母之间间距
             letterSpacing: 5,
             //文本样式
             fontStyle: FontStyle.italic,
